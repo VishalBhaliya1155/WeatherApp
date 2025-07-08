@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CityWeather from './pages/Weather';
+import Home from './pages/Home';
+// import { Link } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  // const [city,setcity]=usestate();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+      {/* <nav style={{ padding: '1rem', background: '#eee' }}>
+        <Link to="/city/Vadodara" style={{ marginRight: '1rem' }}>Home</Link>
+        <Link to="/city/Vadodara" style={{ marginRight: '1rem' }}>Vadodara</Link>
+        <Link to="/city/mumbai">Mumbai</Link>
+      </nav> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/city/:cityName" element={<CityWeather />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Home from './pages/Home';
+// import CityWeather from './pages/CityWeather';
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/weather/:city" element={<CityWeather />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
