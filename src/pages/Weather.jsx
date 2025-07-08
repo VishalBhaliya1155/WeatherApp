@@ -18,7 +18,7 @@ const Weather = () => {
   const [forecastDaily, setForecastDaily] = useState([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isDark, setIsDark] = useState(true); 
-  const [cityList, setCityList] = useState(defaultCities);
+  // const [cityList, setCityList] = useState(defaultCities);
 
   useEffect(() => {
     document.body.className = isDark ?'light-theme':'dark-theme';
@@ -34,6 +34,7 @@ const Weather = () => {
  const handleCitySelect = (selectedCity) => {
   navigate(`/city/${selectedCity}`); 
    setCity(selectedCity.trim());
+   setSearchInput(selectedCity.trim())
 };
 useEffect(() => {
   const loadWeather = async () => {
