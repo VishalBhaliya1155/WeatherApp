@@ -10,7 +10,7 @@ const Weather = () => {
     const { city2 } = useParams();
   const navigate = useNavigate();
 
-  const defaultCities = ['Vadodara', 'Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Jaipur'];
+  const defaultCities = ['Vadodara', 'Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Jaipur','Tokyo','New York','Dubai'];
   const [city, setCity] = useState(city2 || 'Vadodara');
   const [searchInput, setSearchInput] = useState('');
   const [current, setCurrent] = useState(null);
@@ -167,7 +167,7 @@ useEffect(() => {
         <div className={`weather-left ${isMobile ? 'mobile' : ''}`}>
           {current && (
             <div className="card">
-              <h2>{city.toUpperCase()}</h2>
+              <h2>{city.toUpperCase()}, {current.sys.country}</h2>
               <p className="weather-description">{formatDate()}</p>
               <img
                 src={`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}
