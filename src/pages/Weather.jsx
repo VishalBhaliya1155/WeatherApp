@@ -18,7 +18,7 @@ const Weather = () => {
   const [forecastDaily, setForecastDaily] = useState([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isDark, setIsDark] = useState(true); 
-  // const [cityList, setCityList] = useState(defaultCities);
+  const [cityList, setCityList] = useState(defaultCities);
 
   useEffect(() => {
     document.body.className = isDark ?'light-theme':'dark-theme';
@@ -65,10 +65,14 @@ useEffect(() => {
   e.preventDefault();
   const trimmed = searchInput.trim();
   if (trimmed !== '') {
-    setCity(trimmed)
+    if (!cityList.includes(trimmed)) {
+      setCityList(prev => [...prev, trimmed]);
+    }
+    setCity(trimmed);
     navigate(`/city/${trimmed}`);
   }
 };
+
 
 //   const handleSearch = (e) => {
 //     e.preventDefault();
@@ -113,7 +117,7 @@ useEffect(() => {
     gap: '10px',
     justifyContent: 'flex-start'
   }}>
-    {defaultCities.map((cityName, i) => (
+    {cityList.map((cityName, i) => (
       <button
         key={i}
         className="search-btn"

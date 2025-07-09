@@ -245,10 +245,13 @@
 }
 
 /* Air Conditions */
-.air-conditions p {
-  margin: 6px 0;
+.air-conditions {
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
-
 /* Today Forecast */
 .today-forecast {
   background: #0e3e73;
@@ -264,7 +267,7 @@
 .today-forecast-scroll {
   display: flex;
   overflow-x: auto;
-  gap: 10px;
+  gap: 70px;
   padding-bottom: 10px;
 }
 
@@ -350,15 +353,19 @@ body {
 
 /* AIR BOX */
 .air-box {
-  /* background: var(--box-bg); */
-  padding: 8px;
-  border-radius: 6px;
-  color: var(--text-color);
+  flex: 1 1 45%;
+  min-width: 150px;
+  background: var(--card-inner-bg);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--inner-shadow);
 }
 .air-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 110px;
+  gap: 15px;
+  justify-content: space-between;
 }
 
 .air-grid.air-box {
@@ -373,11 +380,17 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .air-grid.air-icon {
-  font-size: 20px;
-  width: 24px;
-  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+  display: block;
+  color: var(--primary);
 }
 
+@media screen and (max-width: 600px) {
+  .air-box {
+    flex: 1 1 100%;
+  }
+}
 
 .dropdown-wrapper {
   display: flex;

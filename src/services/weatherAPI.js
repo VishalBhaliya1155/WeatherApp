@@ -22,3 +22,12 @@ export const fetchForecast = (city) =>
       units: 'metric'
     }
   });
+  export const fetchCity = (city) =>
+  axios.get(`${BASE_URL}/popular-cities
+`, {
+    params: {
+      q: city,
+      appid: API_KEY,
+      units: 'metric'
+    }
+  });
