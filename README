@@ -1,3 +1,71 @@
+
+
+WeatherApp - React JS
+
+This is a simple Weather Application built using **React JS** that displays current weather information for a given city using the **OpenWeatherMap API**.
+
+Live GitHub Repo
+
+[https://github.com/VishalBhaliya1155/WeatherApp](https://github.com/VishalBhaliya1155/WeatherApp)
+
+
+---
+
+Features
+
+- Search weather by city name
+- Displays temperature, weather conditions, humidity, and wind speed
+- Responsive design for desktop and mobile
+- Clean and minimal UI
+
+---
+
+ Technologies Used
+
+- React JS (Functional Components + Hooks)
+- OpenWeatherMap API
+- CSS
+
+---
+ Getting Started
+
+Follow the instructions below to set up and run the project locally:
+
+1 Clone the Repository
+
+```bash
+ if using git 
+ Option 1: Clone the Repository (Recommended)
+git clone https://github.com/VishalBhaliya1155/WeatherApp.git
+
+cd WeatherApp
+else
+Option 2: Download ZIP (If You Don't Want to Use Git)
+Go to the GitHub repo: https://github.com/VishalBhaliya1155/WeatherApp
+
+Click the green Code button and select Download ZIP
+
+Extract the ZIP file
+
+Open the folder in your code editor (e.g., VS Code)
+
+Open the terminal inside that folder
+
+
+2. Install Dependencies
+npm install
+
+ Note: Steps 3 and 4 are optional. You can skip them because the project already includes a working OpenWeatherMap API key for testing. However, if you want to use your own API key, follow steps 3 and 4.
+      3.Get API Key from OpenWeatherMap
+      Go to https://openweathermap.org/api
+
+      4. in .env file
+      REACT_APP_WEATHER_API_KEY=  if need change key 
+  
+ 5. Run the Project
+ npm start
+
+```
 This React Weather App is a simple, responsive, and user-friendly web application designed to provide users with current weather information, hourly forecasts, and a weekly weather outlook. Built using React.js and styled with custom CSS, this application offers a clean interface and smooth user experience across all devices. It uses data from the OpenWeatherMap API and does not include any map-based visualizations, which keeps the app lightweight and fast.
 
 Upon loading, the application automatically fetches and displays the weather for the default city, which is set to Vadodara. Users can search for other cities using the search bar located prominently at the top. The search functionality is built using controlled components in React, and the city input is passed to API requests for both current weather and forecast data.

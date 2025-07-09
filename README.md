@@ -1,3 +1,68 @@
+WeatherApp - React JS
+
+This is a simple Weather Application built using **React JS** that displays current weather information for a given city using the **OpenWeatherMap API**.
+
+Live GitHub Repo
+
+[https://github.com/VishalBhaliya1155/WeatherApp](https://github.com/VishalBhaliya1155/WeatherApp)
+
+
+---
+
+Features
+
+- Search weather by city name
+- Displays temperature, weather conditions, humidity, and wind speed
+- Responsive design for desktop and mobile
+- Clean and minimal UI
+
+---
+
+ Technologies Used
+
+- React JS (Functional Components + Hooks)
+- OpenWeatherMap API
+- CSS
+
+---
+ Getting Started
+
+Follow the instructions below to set up and run the project locally:
+
+1 Clone the Repository
+
+```bash
+ if using git 
+ Option 1: Clone the Repository (Recommended)
+git clone https://github.com/VishalBhaliya1155/WeatherApp.git
+
+cd WeatherApp
+else
+Option 2: Download ZIP (If You Don't Want to Use Git)
+Go to the GitHub repo: https://github.com/VishalBhaliya1155/WeatherApp
+
+Click the green Code button and select Download ZIP
+
+Extract the ZIP file
+
+Open the folder in your code editor (e.g., VS Code)
+
+Open the terminal inside that folder
+
+
+2. Install Dependencies
+npm install
+
+ Note: Steps 3 and 4 are optional. You can skip them because the project already includes a working OpenWeatherMap API key for testing. However, if you want to use your own API key, follow steps 3 and 4.
+      3.Get API Key from OpenWeatherMap
+      Go to https://openweathermap.org/api
+
+      4. in .env file
+      REACT_APP_WEATHER_API_KEY=  if need change key 
+  
+ 5. Run the Project
+ npm start
+ ```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
